@@ -1,0 +1,280 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    overflow-x: hidden;
+    animation: gradient 10s ease infinite;
+    background-color: #000;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+/* Add a background image animation */
+@keyframes backgroundAnimation {
+    0% {
+        background-image: url('https://source.unsplash.com/1600x900/?coding');
+    }
+    25% {
+        background-image: url('https://source.unsplash.com/1600x900/?technology');
+    }
+    50% {
+        background-image: url('https://source.unsplash.com/1600x900/?web-development');
+    }
+    75% {
+        background-image: url('https://source.unsplash.com/1600x900/?programming');
+    }
+    100% {
+        background-image: url('https://source.unsplash.com/1600x900/?coding');
+    }
+}
+
+body {
+    animation: backgroundAnimation 30s infinite ease-in-out;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    z-index: 100;
+    padding: 15px 0;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.navbar ul li a {
+    color: #fff;
+    font-size: 1.2rem;
+    text-decoration: none;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    background-color: #3498db;
+    color: #fff;
+    border-radius: 5px;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    font-size: 1.2rem;
+    padding: 15px 30px;
+    background-color: #3498db;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #2980b9;
+}
+
+/* Typing Effect */
+.typing-effect {
+    display: inline-block;
+    font-size: 1.5rem;
+    font-weight: 400;
+    border-right: 2px solid #fff;
+    padding-right: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    animation: typing 4s steps(30) 1s forwards, blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+/* Section Styles */
+.section {
+    padding: 50px 20px;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.section p, .section li {
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+
+/* Fade-in Effect */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Skills Section */
+#skills .skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+#skills .skill {
+    background-color: #3498db;
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 20px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+#skills .skill:hover {
+    background-color: #2980b9;
+    transform: translateY(-5px);
+}
+
+/* Projects Section */
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.project {
+    background-color: #fff;
+    padding: 20px;
+    width: 280px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.project p {
+    font-size: 1rem;
+    color: #7f8c8d;
+    line-height: 1.5;
+}
+
+.project:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Contact Section */
+#contact ul {
+    margin-top: 20px;
+}
+
+#contact ul li {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+#contact ul li a {
+    color: #3498db;
+    transition: color 0.3s ease;
+}
+
+#contact ul li a:hover {
+    color: #2980b9;
+}
+
+/* Footer */
+footer {
+    background-color: #2c3e50;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+/* Media Query for Mobile */
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+    }
+
+    .projects-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .project {
+        width: 90%;
+    }
+}
